@@ -1,24 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fke-32-nI4">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIPickerView練習" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMB-Qp-bZz">
+                                <rect key="frame" x="0.0" y="341" width="390" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2PX-59-ioS"/>
+                    <connections>
+                        <outlet property="thePickerView" destination="fMB-Qp-bZz" id="0xc-UV-vfJ"/>
+                        <segue destination="RsS-Rg-uQC" kind="show" identifier="goPage2" id="tKv-dB-lag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="125" y="82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yp2-sn-i3Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fke-32-nI4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g6z-f1-qPN">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="R3v-xR-SPE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEh-Gm-LpS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-897" y="82"/>
+        </scene>
+        <!--Page2 View Controller-->
+        <scene sceneID="EbH-pI-gZw">
+            <objects>
+                <viewController id="RsS-Rg-uQC" customClass="Page2ViewController" customModule="UIPickerView練習" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tqF-zv-bfY">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLU-fi-tU1">
+                                <rect key="frame" x="0.0" y="364" width="390" height="116"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="占卜結果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXE-BX-NQP">
+                                <rect key="frame" x="111" y="326" width="168" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k3O-kS-hIv"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="YLU-fi-tU1" firstAttribute="centerY" secondItem="tqF-zv-bfY" secondAttribute="centerY" id="Q1t-6I-bho"/>
+                            <constraint firstItem="YLU-fi-tU1" firstAttribute="trailing" secondItem="k3O-kS-hIv" secondAttribute="trailing" id="V3f-qU-1gu"/>
+                            <constraint firstItem="YLU-fi-tU1" firstAttribute="leading" secondItem="k3O-kS-hIv" secondAttribute="leading" id="XtF-cK-K6a"/>
+                            <constraint firstItem="k3O-kS-hIv" firstAttribute="bottom" secondItem="YLU-fi-tU1" secondAttribute="bottom" constant="330" id="atj-IM-wBG"/>
+                            <constraint firstItem="tXE-BX-NQP" firstAttribute="leading" secondItem="k3O-kS-hIv" secondAttribute="leading" constant="111" id="hZp-vr-eu5"/>
+                            <constraint firstItem="k3O-kS-hIv" firstAttribute="trailing" secondItem="tXE-BX-NQP" secondAttribute="trailing" constant="111" id="pb7-eb-6QZ"/>
+                            <constraint firstItem="YLU-fi-tU1" firstAttribute="top" secondItem="tXE-BX-NQP" secondAttribute="bottom" constant="8" id="rv6-EE-pmz"/>
+                            <constraint firstItem="YLU-fi-tU1" firstAttribute="centerX" secondItem="tqF-zv-bfY" secondAttribute="centerX" id="uyL-GC-gdf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XqV-4b-7RG"/>
+                    <connections>
+                        <outlet property="theLabel" destination="YLU-fi-tU1" id="lq2-4v-mnM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4X-Fn-qic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164.6153846153845" y="81.753554502369667"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
